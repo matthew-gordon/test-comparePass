@@ -15,7 +15,7 @@ describe('comparePass()', () => {
      results.should.eql(true);
      done();
     });
-    it('should return false if the password is correct', (done) => {
+    it('should return false if the password is incorrect', (done) => {
      const salt = bcrypt.genSaltSync();
      const hash = bcrypt.hashSync('test', salt);
      const results = functions.comparePass('testing', hash);
